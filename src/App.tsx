@@ -6,6 +6,22 @@ import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
+  const [color, setColor] = useState('black')
+  const [italic, setItalic] = useState(false)
+  const [size, setSize] = useState(16)
+
+  const changeColor = () => {
+    setColor(color === 'black' ? 'red' : 'black')
+  }
+
+  const toggleItalic = () => {
+    setItalic(!italic)
+  }
+
+  const changeSize = () => {
+    setSize(size === 16 ? 20 : 16)
+  }
+  
 
   return (
     <>
@@ -24,6 +40,12 @@ function App() {
         </button>
         <p>
           Edit <code>src/App.tsx</code> and save to test HMR
+        </p>
+        <button onClick={changeColor}>Cambia colore</button>
+        <button onClick={toggleItalic}>Stile Italic</button>
+        <button onClick={changeSize}>Cambia dimensione</button>
+        <p style={{ color, fontStyle: italic ? 'italic' : 'normal', fontSize: `${size}px` }}>
+          Testo di prova per le funzioni
         </p>
       </div>
       <p className="read-the-docs">
