@@ -45,7 +45,7 @@ function App() {
         <button onClick={toggleItalic}>Stile Italic</button>
         <button onClick={changeSize}>Cambia dimensione</button>
         <p style={{ color, fontStyle: italic ? 'italic' : 'normal', fontSize: `${size}px` }}>
-          Testo di prova per le funzioni
+          Cambiami di nuovo!
         </p>
       </div>
       <p className="read-the-docs">
